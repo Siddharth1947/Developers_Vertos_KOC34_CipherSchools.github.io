@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation</title>
+    <style>
+        *{
+            font-size: 16px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+        background: url("https://wallpaperaccess.com/full/837978.jpg");
+        background-position:inherit;
+        text-shadow: blueviolet;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+        
+        }
+        p.heading
+        {
+            display: inline-block;
+            width: 30vw;
+            color: rgb(30,30,95);
+            font-size: 1.8em;
+            margin-left: 10px;
+        }
+        .topnav
+        {
+            display: flex;
+            width: 100%;
+            background-color: rgb(239, 239, 235);
+            color: black;
+            min-height: 10vh;
+            align-items: center;   
+            position: fixed;         
+        }
+        .rightFloat
+        {
+            display: flex;
+            width: 80vw;
+            justify-content: flex-end;            
+        }
+        .topnav ul li
+        {
+            list-style-type: none;
+            display: inline-block;
+            margin: 5px 3px;
+            padding: 5px 10px;
+            font-size: 1.5em;
+        }
+        li.active
+        {
+            background-color: rgb(30, 30, 95);
+            color: white;
+        }
+       .container{
+            background-color: rgb(254, 249, 249);
+            display: inline-block;
+            width: 80vh;
+            margin-left: 50px;
+            margin-top: 16vh;
+            min-height: 60vh;
+            border-radius: 3px;
+            padding-left: 3vw;
+       }
+       .container img
+       {
+            margin-left: 1vw;
+            margin-top: 3vw;
+            width: 10vw;
+            height: 5vh;
+       }
+       input#typ1
+       {
+            border: 0.5px solid rgb(42, 29, 29);
+            border-radius: 3px;
+            color: rgb(31, 31, 67);
+            display: inline;
+            margin: 10px;
+            width: 17vw;
+            padding: 3px;
+            font-size: 1.2em;
+       }
+       input#typ2
+       {
+            border: 0.5px solid rgb(42, 29, 29);
+            border-radius: 3px;
+            color: rgb(31, 31, 67);
+            display: inline-block;
+            margin: 10px;
+            width: 10vw;
+            padding: 3px;
+            font-size: 1.2em;
+       }
+       div.select
+       {
+            margin: 10px;
+            display: inline-block;
+            width: fit-content;
+       }
+       div.select2
+       {
+            margin: 10px;
+            display: block;
+       }
+       select
+       {
+            border: 0.2px solid green;
+            border-radius: 3px;
+            width: 10vw;
+            padding: 3px;
+            font-size: 0.9em;
+            padding: 5px;
+       }
+       p.gen
+       {
+        color: rgb(39, 39, 94);
+        font-size: 2.1em;
+        display: inline;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(30, 30, 108);
+       }
+       label
+       {
+        font-size: 1.0em;
+        display: inline;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(30, 30, 108);
+        margin: 3px 5px 5px 0;
+        font-weight: bold;
+       }
+       p.searchButton
+       {
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: rgb(232, 159, 24);
+        color: white;
+        padding: 8px;
+        display: inline-block;
+        width: fit-content;
+        border-radius: 5px;
+        margin: 5px 10px;
+        padding-top: 5px;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <p class="heading">
+            Welcome To Indian Railways
+        </p>
+        <div class="rightFloat">
+            <ul>
+                <li class="active">
+                    <form action="http://127.0.0.1:5500/about2.html" target="_blank"><button>ABOUT</button></form></li>
+                <li class="active">
+                    <form action="http://127.0.0.1:5500/contact.html" target="blank"><button>CONTACT_US</button></form>
+                </li>    
+                <li class="active">
+                    <form action="http://127.0.0.1:5500/service.html" target="_blank"><button>Service at Station</button></form></li>
+                <li class="active">
+                    <form action="http://127.0.0.1:5500/information.html" target="_blank"><button>INFORMATION</button></form></li>
+                <li class="active">
+                    <form action="http://127.0.0.1:5500/meals.html" target="_blank"><button>MEALS</button></form></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <img src="https://zeevector.com/wp-content/uploads/Azadi-Ka-Amrit-Mahotsav-Logo-PNG-Download.png" alt=<"AAMS">
+        <p class="gen">BOOK TICKET</p>
+        <form action="https://www.irctc.co.in/nget/booking/train-list" target="_blank">
+            <input type="text" id="typ1" placeholder=" From" required>
+            <input type="date" id="typ2" req>
+            <input type="text" id="typ1" placeholder=" To" required>
+            <div class="select">
+                <select id="selClass">
+                    <option value="All Classes">All Classes</option>
+                    <option>AC 3rd Tier</option>
+                    <option>Ac 2nd Tier</option>
+                    <option>AC 1st Tier</option>
+                    <option>Sleeper Tier</option>
+                </select>
+            </div>
+            <div class="select2">
+                <select id="selClass" style="width: 17vw;" required>
+                    <option value="Select Quota">Select Quota</option>
+                    <option>General</option>
+                    <option>Tatkal</option>
+                    <option>Ladies</option>
+                    <option>Children</option>
+                </select>
+            </div>
+            <br>
+            <input type="checkbox" id="input1">
+            <label for="input1"> Person with disability Concession</label>
+            <input type="checkbox" id="input2">
+            <label for="input2"> Flexible with date</label><br>
+            <input type="checkbox" id="input3">
+            <label for="input3"> Train With available birth</label>
+            <input type="checkbox" id="input4">
+            <label for="input4"> Railway pass Concession</label><br>
+            <button>search</button>
+        </form>
+    </div> 
+</body>
+</html>
